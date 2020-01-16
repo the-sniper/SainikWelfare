@@ -1,0 +1,66 @@
+.login_box{
+    box-shadow: 0px 3px 6px #4343432e;
+    border-radius: 5px;
+    padding: 45px 25px 25px 25px;
+    max-width: 545px;
+    margin: 0 auto;
+}
+.login_logo{
+    margin-bottom: 40px;
+}
+.login_title{
+    font-family: 'Noto Serif', serif;
+    font-size: 18px;
+    color: #000;
+    letter-spacing: 4px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.login_wcText{
+    font-size: 18px;
+    color: #000;
+    margin-top: 15px;
+    margin-bottom: 55px;
+}
+.login_textForm{
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+.login_textForm .MuiFormControl-root {
+    width: 100%;
+}
+.login_textForm .MuiFormControl-root:first-child{
+    margin-bottom: 25px;
+}
+.login_rem{
+    margin-top: 15px;
+}
+.login_rem a, .login_rem label.MuiFormControlLabel-root{
+    margin:0;
+}
+.login_rem span.MuiTypography-root.MuiFormControlLabel-label.MuiTypography-body1{
+    font-size: 15px;
+    color: #3E3E3E;
+    font-weight: 300;
+}
+.login_rem a{
+    font-size: 15px;
+    color:var(--prim-color);
+}
+.login_btn{
+    margin-top: 35px;
+    margin-bottom: 25px;
+}
+.login_helpText p{
+    font-size: 16px;
+    margin: 0;
+}
+.login_helpText a{
+    color:var(--sec-color);
+}
+.copyrights_text{
+    font-size:15px;
+    color: #C1C1C1;
+    margin: 0;
+    margin-top: 40px;
+}
