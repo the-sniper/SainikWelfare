@@ -29,12 +29,12 @@
 .login_textForm .MuiFormControl-root {
     width: 100%;
 }
-.login_textForm .MuiFormControl-root:first-child{
+.login_textForm .MuiFormControl-root{
     margin-bottom: 25px;
 }
-.login_rem{
+/* .login_rem{
     margin-top: 15px;
-}
+} */
 .login_rem a, .login_rem label.MuiFormControlLabel-root{
     margin:0;
 }

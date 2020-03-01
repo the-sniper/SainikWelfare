@@ -1,0 +1,23 @@
+.secButton{
+    margin-top:25px !important;
+    margin-bottom: 0 !important;
+    background-color: #fff !important;
+    border: 1px solid var(--prim-color) !important;
+    box-shadow: none !important;
+    height: 56px !important;
+}
+.secButton .MuiButton-label{
+    color: var(--prim-color) !important;
+}
+
+.custom-select{
+    height: 56px;
+    margin-top: 25px;;
+}
+
+.customContainer{
+    padding: 0 60px;
+}
+.noto-serif{
+    font-family: 'Noto Serif' !important;
+}

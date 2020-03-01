@@ -1,4 +1,4 @@
-import React from "react";
+import React , { Component } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import InputLabel from "@material-ui/core/InputLabel";
 import FormControl from "@material-ui/core/FormControl";
@@ -6,15 +6,11 @@ import Select from "@material-ui/core/Select";
 
 const useStyles = makeStyles(theme => ({
   formControl: {
-    margin: theme.spacing(1),
     minWidth: 120
-  },
-  selectEmpty: {
-    marginTop: theme.spacing(2)
   }
 }));
 
-export default function NativeSelects() {
+export default function NativeSelects(props) {
   const classes = useStyles();
   const [state, setState] = React.useState({});
 
@@ -32,10 +28,9 @@ export default function NativeSelects() {
   };
 
   return (
-    <div>
       <FormControl variant="outlined" className={classes.formControl}>
         <InputLabel ref={inputLabel} htmlFor="outlined-age-native-simple">
-          State
+        {props.name}
         </InputLabel>
         <Select
           native
@@ -53,6 +48,5 @@ export default function NativeSelects() {
           <option value={30}>Thirty</option>
         </Select>
       </FormControl>
-    </div>
   );
 }

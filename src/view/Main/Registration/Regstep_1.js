@@ -38,7 +38,6 @@ class Regstep_1 extends Component {
                   type={data.type}
                   variant="outlined"
                 >
-                  Input
                 </Textfield>
               </div>
             </div>

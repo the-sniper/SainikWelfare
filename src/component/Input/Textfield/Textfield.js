@@ -6,7 +6,7 @@ class Textfield extends Component{
   
     render(){
         return(
-            <TextField id="outlined-basic" label={this.props.label} type={this.props.type} variant="outlined" />
+            <TextField id="outlined-basic" label={this.props.label} type={this.props.type} placeholder={this.props.placeholder} variant="outlined" />
         );
     }
 }

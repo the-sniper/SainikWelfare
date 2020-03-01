@@ -1,0 +1,8 @@
+.secondaryButton{
+    width: 100%;
+    height: 56px;
+}
+
+.secondaryButton .MuiButton-label{
+    text-transform: capitalize;
+}

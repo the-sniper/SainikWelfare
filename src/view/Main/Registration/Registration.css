@@ -10,7 +10,7 @@
   margin-bottom: 25px;
   background-color: var(--prim-color);
   border-radius: 5px;
-  box-shadow: 0px 3px 10px #4d52db45 ;
+  box-shadow: 0px 3px 10px #4d52db45;
   width: 100%;
   height: 60px;
   border: 1px solid var(--prim-color);
@@ -20,7 +20,7 @@
   .MuiButton-label {
   font-size: 18px;
   color: #fff;
-  font-weight: 600;
+  font-weight: 400;
 }
 .registrationForm .MuiButtonBase-root.MuiButton-root.MuiButton-text:hover {
   background-color: #383cb5;
@@ -42,7 +42,7 @@
 }
 .registrationForm
   .MuiButtonBase-root.MuiButton-root.MuiButton-text.makeStyles-backButton-2:hover {
-    background-color: #383cb5;
+  background-color: #383cb5;
 }
 .registrationForm
   .MuiButtonBase-root.MuiButton-root.MuiButton-text.makeStyles-backButton-2:hover
@@ -56,7 +56,7 @@
 .reg_ip {
   width: 100%;
 }
-.reg_ip .MuiFormControl-root.MuiTextField-root {
+.reg_ip .MuiFormControl-root {
   width: 100%;
   margin-top: 25px;
 }
@@ -72,4 +72,42 @@
   color: #c1c1c1;
   margin: 0;
   margin-top: 40px;
+}
+.regStep2 .secondaryButton {
+  margin-top: 25px;
+}
+.regStep3 .reg_ip {
+  margin-top: 30px;
+}
+.regStep3 .reg_ip #regUpd {
+  display: none;
+}
+.regStep3 .reg_ip .regUpdBtn {
+  width: 495px;
+  height: 200px;
+  background: #ececec;
+  cursor: pointer;
+  border-radius: 10px;
+  border-color: #b5b5b5;
+  border-style: dashed;
+  border-width: medium;
+}
+.regStep3 .reg_ip .regUpdBtn i {
+  font-size: 25px;
+}
+.regStep3 .reg_ip .regUpdBtn {
+  display: grid;
+  vertical-align: middle;
+  padding: 25px;
+  color: #b7b7b7;
+}
+.regStep3 .reg_ip .regUpdBtn h4 {
+  font-size: 18px;
+  margin: 0;
+  color: #444;
+}
+.regStep3 .reg_ip .regUpdBtn p {
+  font-size: 16px;
+  margin: 0;
+  color: #5d5d5d;
 }

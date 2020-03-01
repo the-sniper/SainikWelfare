@@ -1,0 +1,12 @@
+.userDetails {
+  background: #efefef;
+  height: 100vh;
+}
+
+.userDetails .userDetailForm {
+  background: #fff;
+  border-radius: 5px;
+}
+.userDetails .userDetailForm .MuiFormControl-root {
+  width: 100%;
+}

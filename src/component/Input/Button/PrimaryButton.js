@@ -6,7 +6,7 @@ class PrimaryButton extends Component {
     render() {
         return (
             <Button className="primaryButton" variant="contained">
-                Login
+                {this.props.login_label}
             </Button>
         );
     }

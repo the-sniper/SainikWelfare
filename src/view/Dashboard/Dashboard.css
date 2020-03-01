@@ -1,0 +1,46 @@
+.dashContent {
+  background: #efefef;
+  height: 100%;
+}
+
+.dashTitle {
+  font-size: 22px;
+  font-weight: 700;
+  color: #3e3e3e;
+  letter-spacing: 3px;
+  padding-top: 60px;
+  padding-bottom: 45px;
+}
+
+.dashContent .actionCnt {
+  width: 495px;
+  background: #fff;
+  padding: 15px 20px;
+  border-radius: 10px;
+}
+
+.dashContent .actionCnt h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--prim-color);
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+
+.dashContent .actionCnt .viewAllBtn {
+  font-size: 15px;
+  color: var(--sec-color);
+  text-align: center;
+  margin-top: 25px;
+  text-transform: uppercase;
+  display: block;
+}
+
+.dashContent .userStatsCnt{
+    margin-top: 75px;
+    padding-bottom: 120px;
+}
+
+.chartCnt{
+    background: #fff;
+}

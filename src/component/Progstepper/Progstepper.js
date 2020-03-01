@@ -9,6 +9,7 @@ import Typography from "@material-ui/core/Typography";
 import { Link } from "react-router-dom";
 import Regstep_1 from "../../view/Main/Registration/Regstep_1";
 import Regstep_2 from "../../view/Main/Registration/Regstep_2";
+import Regstep_3 from "../../view/Main/Registration/Regstep_3";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -52,7 +53,16 @@ function getStepContent(stepIndex) {
         </div>
       );
     case 2:
-      return "Upload Docs";
+      return (
+        <div>
+          <h2>Upload Documents</h2>
+          <div className="row">
+            <div className="col-sm-12">
+              <Regstep_3 />
+            </div>
+          </div>
+        </div>
+      );
     default:
       return "Unknown stepIndex";
   }
@@ -88,10 +98,19 @@ export default function HorizontalLabelPositionBelowStepper() {
         <div>
           {activeStep === steps.length ? (
             <div>
-              <Typography className={classes.instructions}>
-                All steps completed
-              </Typography>
-              <Button onClick={handleReset}>Reset</Button>
+              <div className={classes.instructions}>
+                <div className="col-md-12">
+                  Congrats! You have successfully submitted your profile.
+                </div>
+                <div className="col-md-12">
+                  We've sent your information to your Zilla Sainik Board (ZSB)
+                  to complete the verification process.
+                </div>
+                <div className="col-md-12">
+                  You will be able to login once your profile is verified.
+                </div>
+              </div>
+              <Button onClick={handleReset}>Go to Homepage</Button>
             </div>
           ) : (
             <div>
@@ -109,7 +128,7 @@ export default function HorizontalLabelPositionBelowStepper() {
                 <Button label="Next" onClick={handleNext}>
                   {activeStep === steps.length - 1 ? "Submit" : "Next"}
                 </Button>
-                </div>
+              </div>
             </div>
           )}
         </div>
