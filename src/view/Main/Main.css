@@ -21,3 +21,12 @@
 .noto-serif{
     font-family: 'Noto Serif' !important;
 }
+
+.dashTitle {
+    font-size: 22px;
+    font-weight: 700;
+    color: #3e3e3e;
+    letter-spacing: 3px;
+    padding-top: 60px;
+    padding-bottom: 45px;
+  }
