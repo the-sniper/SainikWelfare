@@ -1,0 +1,207 @@
+.userDetailsForm {
+  background: #efefef;
+  padding: 60px 0;
+}
+
+.userDetailsForm .ltPanel {
+  background: #fff;
+  width: 320px;
+  border-radius: 5px;
+  margin-right: 35px;
+  height: 625px;
+  padding: 45px 30px;
+}
+.userDetailsForm .ltPanel ul {
+  height: 100%;
+}
+
+.userDetailsForm .ltPanel li {
+  width: 100%;
+  text-align: left;
+  display: flex;
+  align-items: center;
+}
+
+.userDetailsForm .ltPanel li a {
+  padding-left: 75px;
+  color: #d6d6d6;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.userDetailsForm .ltPanel li .checkpoint {
+  position: absolute;
+  content: "";
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #d6d6d6;
+  border: 1px solid currentColor;
+}
+
+.userDetailsForm .ltPanel li:not(:last-child) .checkpoint::before {
+  position: absolute;
+  content: "";
+  border-right: 2px dashed #d6d6d6;
+  height: 40px;
+  top: 48px;
+  left: 50%;
+}
+.userDetailsForm .ltPanel li.active .checkpoint::before {
+  border-color: var(--secColor);
+}
+
+.userDetailsForm .ltPanel li.active .checkpoint {
+  color: var(--secColor);
+  border: 1px solid currentColor;
+}
+.userDetailsForm .ltPanel li.active a {
+  color: var(--secColor);
+}
+
+.userDetailsForm .ltPanel li.completed .checkpoint::before {
+  border-color: var(--secColor);
+}
+
+.userDetailsForm .ltPanel li.completed .checkpoint {
+  color: #fff;
+  background: var(--secColor);
+  border: 1px solid var(--secColor);
+}
+.userDetailsForm .ltPanel li.completed a {
+  color: var(--secColor);
+}
+.userDetailsForm .rtPanel {
+  background: #fff;
+  width: 890px;
+  border-radius: 5px;
+  height: 100%;
+  padding: 45px 30px;
+}
+
+.userDetailsForm .formTitle {
+  color: #3e3e3e;
+  font-size: 18px;
+  text-align: left;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.userDetailsForm .formSubTitle {
+  font-size: 16px;
+  text-align: left;
+  margin-bottom: 25px;
+  font-weight: 600;
+  color: #3e3e3e;
+  margin-top: 25px;
+}
+.userDetailsForm .radioLabel {
+  font-size: 15px;
+  margin-bottom: 15px;
+  color: #000;
+}
+.userDetailsForm .formRadio {
+  margin-bottom: 35px;
+}
+.btnContainer {
+  margin-top: 50px;
+}
+.userDetailsForm .primButton,
+.userDetailsForm .tertButton {
+  width: 200px;
+}
+.userDetailsForm .tertButton {
+  margin-right: 15px;
+}
+
+.slider {
+  position: fixed;
+  right: -150%;
+  top: 0;
+  width: auto;
+  height: 100vh;
+  color: #000;
+  text-align: left;
+  transition: 500ms right ease-in-out;
+  z-index: 1000;
+}
+
+.slider.show {
+  right: 0px;
+}
+
+.slider .slideRt {
+  background: #ffffff;
+  padding: 30px;
+  width: 30vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  right: 0;
+  overflow: visible;
+  box-shadow: -6px 0px 25px #00000026;
+}
+
+.slider .slideRt .closeSlider {
+  position: absolute;
+  top: 10px;
+  left: -14px;
+  background: var(--primColor);
+  width: 30px;
+  height: 30px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 200ms linear 100ms;
+}
+.slider .slideRt .closeSlider span {
+  color: #fff;
+}
+
+.slider .slideRt .closeSlider:hover {
+  width: 50px;
+  box-shadow: 0px 8px 15px #4d52db9e;
+}
+
+.slider .slideRt .closeSlider:hover span {
+  animation: moveArrow 600ms 1;
+}
+@keyframes moveArrow {
+  from {
+    margin-left: 0px;
+  }
+  50% {
+    margin-left: 10px;
+  }
+  to {
+    margin-left: 0px;
+  }
+}
+
+.slider .slideRt .sliderRtContent {
+  overflow-y: auto;
+  height: 100%;
+}
+.slider .slideRt .sliderRtContent::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+.slider .slideLt {
+  width: 100vw;
+  height: 100vh;
+  background: transparent;
+  opacity: 0;
+  visibility: visible;
+  transition: all 200ms linear;
+  /* position: absolute; */
+}
+.slider .slideLt.showOverlay {
+  background: #292f4c80;
+  opacity: 1;
+  width: 100vw;
+  height: 100vh;
+  visibility: visible;
+}
