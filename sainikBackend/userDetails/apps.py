@@ -1,5 +1,0 @@
-from django.apps import AppConfig
-
-
-class UserdetailsConfig(AppConfig):
-    name = 'userDetails'
