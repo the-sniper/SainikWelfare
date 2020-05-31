@@ -9,7 +9,7 @@ class PrimaryButton extends Component {
           type={this.props.type}
           name={this.props.label}
           id=""
-          class="primButton"
+          className="primButton"
           onClick={this.props.actionFunction}
         >
           {this.props.label}

@@ -4,14 +4,14 @@ import "./InputBox.css";
 class InputBox extends Component {
   render() {
     return (
-      <div class="form-group customInputBox">
+      <div className="form-group customInputBox">
         <label htmlFor={this.props.id}>
           {this.props.label}
           {this.props.optional}
         </label>
         <input
           type={this.props.type}
-          class="form-control"
+          className="form-control"
           name={this.props.name}
           id={this.props.id}
           aria-describedby="helpId"
@@ -19,8 +19,9 @@ class InputBox extends Component {
           required={this.props.required}
           min="0"
           minLength={this.props.minLength}
+          onChange={this.props.changeHandler}
         />
-        {/* <small id="helpId" class="form-text text-muted">Help text</small> */}
+        <small id="helpId" class="form-text text-muted">{this.props.errorText}</small>
       </div>
     );
   }

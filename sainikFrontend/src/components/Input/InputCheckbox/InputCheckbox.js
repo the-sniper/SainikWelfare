@@ -5,7 +5,7 @@ class InputCheckbox extends Component {
   render() {
     return (
       <div>
-        <label class="customCheckbox">
+        <label className="customCheckbox">
           <input type="checkbox" />
           <span>{this.props.label}</span>
         </label>
