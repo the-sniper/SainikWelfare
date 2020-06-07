@@ -17,13 +17,14 @@ class UserDetailsForm extends Component {
       <ServiceDetails />,
       <PensionDetails />,
       <PersonalDetails />,
+      <ContactDetails />,
       <FamilyDetails />,
       <DependentDetails />,
-      <ContactDetails />,
     ];
 
     this.state = {
       currentFormIndex: 0,
+      completionMsg : ''
     };
   }
 
@@ -31,7 +32,7 @@ class UserDetailsForm extends Component {
     let currentIndex = this.state.currentFormIndex + 1;
     if (currentIndex >= 6) {
       // currentIndex = 0;
-      return (this.submitValue = "Submitted Successfully !");
+      return (this.setState({completionMsg : 'Submitted Successfully !'}));
     }
     this.setState((state) => ({
       currentFormIndex: currentIndex,
@@ -99,6 +100,7 @@ class UserDetailsForm extends Component {
 
           <div className="rtPanel">
             {this.formLists[this.state.currentFormIndex]}
+            <h1> {this.state.completionMsg} </h1>
             <h1>{this.submitValue}</h1>
             <TertButton
               type="submit"

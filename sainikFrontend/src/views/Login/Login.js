@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import InputBox from "../../components/Input/InputBox/InputBox";
 import InputCheckbox from "../../components/Input/InputCheckbox/InputCheckbox";
 import PrimaryButton from "../../components/Input/Button/PrimaryButton";
-import axios from axios;
+import axios from "axios";
 import "./Login.css";
 
 class Login extends Component {
@@ -17,23 +17,35 @@ class Login extends Component {
   }
 
   changeHandler = (event) => {
-    let username= this.state.username
-    let password = this.state.password
+    let username = this.state.username;
+    let password = this.state.password;
     this.setState({
       [event.target.name]: event.target.value,
     });
-  }
+  };
 
   submitForm = (event) => {
     let form = document.getElementById("LoginForm");
     console.log(
-    `This is the form element : ${form.checkValidity()}${Object.keys(form)}`
+      `This is the form element : ${form.checkValidity()}${Object.keys(form)}`
     );
     if (form.checkValidity && form.checkValidity()) {
-    event.preventDefault();
-    }else{
+      event.preventDefault();
+      let { username, password } = this.state;
+      let request = axios.post("http://localhost:8000/user_auth/user/", {
+        username: "admin",
+        password: "admin",
+      });
+      request
+        .then((res) => {
+          console.log("request was successful", res.response.data);
+        })
+        .catch((err) => {
+          console.log("This was the error : ", err);
+        });
+    } else {
     }
-    };
+  };
   Login_Input = () => {
     return [
       {
